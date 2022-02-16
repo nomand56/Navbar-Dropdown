@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+}
+.nested-ol{
+background-color: steelblue;
+    display: none;
+}
+.scnd-child:hover .nested-ol{ 
+    display: block;
+}
+
+li {
+    list-style-type: none;
+}
+ol > li{
+line-height: 54px;
+margin-left: 40px;
+color: white;
+font-weight:bold;}
+
+.nav-bar{
+display: flex;
+justify-content: center;
+height: 60px;
+background-color: steelblue;
+}
+.nested-ol >li{
+    margin: 0;
+}
+.inner-ol{
+    display: none;
+    width: fit-content;
+    /* left: 41px; */
+    position: absolute;
+    right: 20;
+    background-color: steelblue;
+    left: 79px;
+    top: 1px;
+    margin: 0;
+    padding: 0;
+}
+.parent-inner{
+    position: relative
+}
+.parent-inner:hover .inner-ol{
+  
+    display: block;
+}
+
+</style>
+<body>
+    <nav>
+        <ol class="nav-bar">
+            <li>HOME</li>
+            <li class="scnd-child">TESTIMONIALS
+                <ol class="nested-ol">
+                    <li class="parent-inner">UI/UX
+                        <ol class="inner-ol">
+                            <li>Material Ui</li>
+                            <li>Bootstrap</li>
+                            <li>SCss</li>
+                            <li>Tailwind</li>
+                        </ol>
+                    </li>
+                    <li>Front</li>
+                    <li>Back</li>
+                    <li>Server side</li>
+                </ol>
+            </li>
+            <li>ABOUT</li>
+            <li>CONTACT US</li>
+        </ol>
+    </nav>
+</body>
+</html>
